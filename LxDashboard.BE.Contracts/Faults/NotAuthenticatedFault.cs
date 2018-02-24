@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LxDashboard.Common
+namespace LxDashboard.BE.Contracts.Faults
 {
-    public class Class1
+    [DataContract]
+    public class NotAuthenticatedFault
     {
     }
 }

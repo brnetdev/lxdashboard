@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Faults\CredentailsFult.cs" />
+    <Compile Include="Faults\NotAuthenticatedFault.cs" />
     <Compile Include="Faults\UserNotUniqueFault.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

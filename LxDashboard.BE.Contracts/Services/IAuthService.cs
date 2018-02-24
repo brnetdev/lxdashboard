@@ -21,6 +21,9 @@ namespace LxDashboard.BE.Contracts.Services
         [OperationContract]
         [FaultContract(typeof(UserNotUniqueFault))]
         void AddUser(string login, string password);
+
+        [OperationContract]
+        string IsAuthenticated(string authSessionId);
         
     }
 }

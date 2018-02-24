@@ -119,6 +119,8 @@
     <Compile Include="AuthService.svc.cs">
       <DependentUpon>AuthService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Infrasturcture\AuthenticationBehavior.cs" />
+    <Compile Include="Infrasturcture\AuthenticationMessageInspector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
