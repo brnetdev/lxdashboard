@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Domain.Services
 {        
-    public class UserService : IUserDomainService
+    public class UserDomainService : LxDashboard.BE.Domain.IUserDomainService
     {
 
         public AddUserStatus AddUser(string login, string password)
@@ -47,6 +47,11 @@ namespace LxDashboard.BE.Domain.Services
             {
                 return db.Users.Count(u => (u.Login == dbUser.Login) && (u.Password == dbUser.Password)) == 1;
             }
+        }
+
+        public ValidationResult Validate(User validationObject)
+        {
+            throw new NotImplementedException();
         }
     }
 }

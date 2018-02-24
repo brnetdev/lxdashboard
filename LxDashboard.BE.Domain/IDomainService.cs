@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Domain
 {
-    public interface IDomainService
+    public class ValidationResult
     {
+        public bool Result { get; set; }
+        public string Message { get; set; }
     }
+
+    public interface IDomainService<T>
+    {
+        ValidationResult Validate(T validationObject); 
+    }
+
+
 }

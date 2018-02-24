@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Domain
 {
-    public interface IUserDomainService : IDomainService
+    public interface IUserDomainService : IDomainService<User>
     {
         bool CheckCredentials(string user, string password);
         AddUserStatus AddUser(string login, string password);

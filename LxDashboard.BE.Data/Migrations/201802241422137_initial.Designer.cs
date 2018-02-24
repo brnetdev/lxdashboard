@@ -13,7 +13,7 @@ namespace LxDashboard.BE.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201802241239383_initial"; }
+            get { return "201802241422137_initial"; }
         }
         
         string IMigrationMetadata.Source

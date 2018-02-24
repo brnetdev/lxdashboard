@@ -14,5 +14,7 @@ namespace LxDashboard.BE.Data.Entities
         public DateTime DeployDate { get; set; }
         public DateTime FreezeDate { get; set; }
 
+        public List<Branch> Branches { get; set; }
+
     }
 }

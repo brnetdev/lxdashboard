@@ -16,7 +16,7 @@ namespace LxDashboard.BE.Services
         {
             lock (_sessionIds)
             {
-                var service = new UserService();
+                var service = new UserDomainService();
                 if (service.CheckCredentials(login, password))
                 {
                     var guid = Guid.NewGuid().ToString();
@@ -33,7 +33,7 @@ namespace LxDashboard.BE.Services
 
         public void AddUser(string login, string password)
         {
-            var service = new UserService();
+            var service = new UserDomainService();
             var result = service.AddUser(login, password);
             if (result == Domain.AddUserStatus.UserNotUnique)
             {

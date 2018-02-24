@@ -12,11 +12,14 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 4000),
+                        Name = c.String(),
+                        Deployment_Id = c.Int(),
                         Sprint_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Deployments", t => t.Deployment_Id)
                 .ForeignKey("dbo.Sprints", t => t.Sprint_Id)
+                .Index(t => t.Deployment_Id)
                 .Index(t => t.Sprint_Id);
             
             CreateTable(
@@ -24,7 +27,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 4000),
+                        Name = c.String(),
                         Branch_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -47,7 +50,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Number = c.String(maxLength: 4000),
+                        Number = c.String(),
                         DeployDate = c.DateTime(nullable: false),
                         FreezeDate = c.DateTime(nullable: false),
                         Cadence_Id = c.Int(),
@@ -62,7 +65,7 @@ namespace LxDashboard.BE.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CreationDate = c.DateTime(nullable: false),
-                        Description = c.String(maxLength: 4000),
+                        Description = c.String(),
                         Alert = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
@@ -72,8 +75,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(maxLength: 4000),
-                        LastName = c.String(maxLength: 4000),
+                        FirstName = c.String(),
+                        LastName = c.String(),
                         Team_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -85,7 +88,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Descritpion = c.String(maxLength: 4000),
+                        Descritpion = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -96,7 +99,7 @@ namespace LxDashboard.BE.Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         DateFrom = c.DateTime(nullable: false),
                         DateTo = c.DateTime(nullable: false),
-                        Objectives = c.String(maxLength: 4000),
+                        Objectives = c.String(),
                         Number = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
@@ -106,8 +109,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Jira = c.String(maxLength: 4000),
-                        Description = c.String(maxLength: 4000),
+                        Jira = c.String(),
+                        Description = c.String(),
                         DateForm = c.DateTime(nullable: false),
                         DateTo = c.DateTime(nullable: false),
                         Type = c.Int(nullable: false),
@@ -121,7 +124,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Information = c.String(maxLength: 4000),
+                        Information = c.String(),
                         Sprint_Id = c.Int(),
                         Team_Id = c.Int(),
                     })
@@ -136,7 +139,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 4000),
+                        Name = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -145,8 +148,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Login = c.String(maxLength: 4000),
-                        Password = c.String(maxLength: 4000),
+                        Login = c.String(),
+                        Password = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -159,6 +162,7 @@ namespace LxDashboard.BE.Data.Migrations
             DropForeignKey("dbo.TeamInfoes", "Sprint_Id", "dbo.Sprints");
             DropForeignKey("dbo.Branches", "Sprint_Id", "dbo.Sprints");
             DropForeignKey("dbo.Deployments", "Cadence_Id", "dbo.Cadences");
+            DropForeignKey("dbo.Branches", "Deployment_Id", "dbo.Deployments");
             DropForeignKey("dbo.Projects", "Branch_Id", "dbo.Branches");
             DropIndex("dbo.TeamInfoes", new[] { "Team_Id" });
             DropIndex("dbo.TeamInfoes", new[] { "Sprint_Id" });
@@ -166,6 +170,7 @@ namespace LxDashboard.BE.Data.Migrations
             DropIndex("dbo.Deployments", new[] { "Cadence_Id" });
             DropIndex("dbo.Projects", new[] { "Branch_Id" });
             DropIndex("dbo.Branches", new[] { "Sprint_Id" });
+            DropIndex("dbo.Branches", new[] { "Deployment_Id" });
             DropTable("dbo.Users");
             DropTable("dbo.Teams");
             DropTable("dbo.TeamInfoes");
