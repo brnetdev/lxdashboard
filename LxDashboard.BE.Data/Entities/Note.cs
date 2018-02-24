@@ -11,7 +11,7 @@ namespace LxDashboard.BE.Data.Entities
         public int Id { get; set; }
         public DateTime CreationDate { get; set; }
         public string Description { get; set; }
-        public byte[] Data { get; set; }
+        //public byte[] Data { get; set; }
         public AlertType Alert { get; set; }
     }
 }

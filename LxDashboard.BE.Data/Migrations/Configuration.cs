@@ -9,7 +9,8 @@ namespace LxDashboard.BE.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(LxDashboard.BE.Data.Db context)

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LxDashboard.BE.Services.AuthService" CodeBehind="AuthService.svc.cs" %>

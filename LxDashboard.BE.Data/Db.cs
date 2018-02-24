@@ -26,7 +26,7 @@ namespace LxDashboard.BE.Data
 
         public Db() : base("cs")
         {
-            //Database.SetInitializer(new )
+            Database.SetInitializer<Db>(new MigrateDatabaseToLatestVersion<Db, LxDashboard.BE.Data.Migrations.Configuration>());            
         }
     }
 }

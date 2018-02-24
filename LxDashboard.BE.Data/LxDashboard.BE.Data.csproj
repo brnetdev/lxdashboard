@@ -73,9 +73,9 @@
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\TeamInfo.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Migrations\201802241101009_initial.cs" />
-    <Compile Include="Migrations\201802241101009_initial.Designer.cs">
-      <DependentUpon>201802241101009_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201802241239383_initial.cs" />
+    <Compile Include="Migrations\201802241239383_initial.Designer.cs">
+      <DependentUpon>201802241239383_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,15 +85,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802241101009_initial.resx">
-      <DependentUpon>201802241101009_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802241239383_initial.resx">
+      <DependentUpon>201802241239383_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DataBase\Database.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="DataBase\Database.sdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

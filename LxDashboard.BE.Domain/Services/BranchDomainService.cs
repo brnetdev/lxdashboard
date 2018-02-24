@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LxDashboard.BE.Contracts
+namespace LxDashboard.BE.Domain.Services
 {
-    public class Class1
+    public class BranchDomainService : IDomainService
     {
+
     }
 }

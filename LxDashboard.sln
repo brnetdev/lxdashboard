@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LxDashboard.FE.Desktop", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LxDashboard.FE.Web", "LxDashboard.FE.Web\LxDashboard.FE.Web.csproj", "{D43CF277-F8D8-4F9F-8250-53EE4EC1DE63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LxDashboard.Common", "LxDashboard.Common\LxDashboard.Common.csproj", "{025EFB14-3CBA-4907-949D-43B8EE207D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D43CF277-F8D8-4F9F-8250-53EE4EC1DE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43CF277-F8D8-4F9F-8250-53EE4EC1DE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D43CF277-F8D8-4F9F-8250-53EE4EC1DE63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025EFB14-3CBA-4907-949D-43B8EE207D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025EFB14-3CBA-4907-949D-43B8EE207D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025EFB14-3CBA-4907-949D-43B8EE207D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025EFB14-3CBA-4907-949D-43B8EE207D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

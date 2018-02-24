@@ -12,7 +12,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(maxLength: 4000),
                         Sprint_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -24,7 +24,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(maxLength: 4000),
                         Branch_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -47,7 +47,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Number = c.String(),
+                        Number = c.String(maxLength: 4000),
                         DeployDate = c.DateTime(nullable: false),
                         FreezeDate = c.DateTime(nullable: false),
                         Cadence_Id = c.Int(),
@@ -62,8 +62,7 @@ namespace LxDashboard.BE.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CreationDate = c.DateTime(nullable: false),
-                        Description = c.String(),
-                        Data = c.Binary(),
+                        Description = c.String(maxLength: 4000),
                         Alert = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
@@ -73,8 +72,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        FirstName = c.String(maxLength: 4000),
+                        LastName = c.String(maxLength: 4000),
                         Team_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -86,8 +85,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Data = c.Binary(),
-                        Descritpion = c.String(),
+                        Descritpion = c.String(maxLength: 4000),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -98,7 +96,7 @@ namespace LxDashboard.BE.Data.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         DateFrom = c.DateTime(nullable: false),
                         DateTo = c.DateTime(nullable: false),
-                        Objectives = c.String(),
+                        Objectives = c.String(maxLength: 4000),
                         Number = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
@@ -108,8 +106,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Jira = c.String(),
-                        Description = c.String(),
+                        Jira = c.String(maxLength: 4000),
+                        Description = c.String(maxLength: 4000),
                         DateForm = c.DateTime(nullable: false),
                         DateTo = c.DateTime(nullable: false),
                         Type = c.Int(nullable: false),
@@ -123,7 +121,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Information = c.String(),
+                        Information = c.String(maxLength: 4000),
                         Sprint_Id = c.Int(),
                         Team_Id = c.Int(),
                     })
@@ -138,7 +136,7 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(maxLength: 4000),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -147,8 +145,8 @@ namespace LxDashboard.BE.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Login = c.String(),
-                        Password = c.String(),
+                        Login = c.String(maxLength: 4000),
+                        Password = c.String(maxLength: 4000),
                     })
                 .PrimaryKey(t => t.Id);
             

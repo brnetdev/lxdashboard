@@ -9,7 +9,7 @@ namespace LxDashboard.BE.Data.Entities
     public class Roadmap
     {
         public int Id { get; set; }
-        public byte[] Data { get; set; }
+        //public byte[] Data { get; set; }
         public string Descritpion { get; set; }
     }
 }
