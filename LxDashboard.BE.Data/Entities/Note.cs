@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Data.Entities
 {
-    public class Task
+    public class Note
     {
         public int Id { get; set; }
-        public string Jira { get; set; }
+        public DateTime CreationDate { get; set; }
         public string Description { get; set; }
-        public DateTime DateForm { get; set; }
-        public DateTime DateTo { get; set; }
-
-        public TaskType Type { get; set; }
-        public TaskKind Kind { get; set; }
+        public byte[] Data { get; set; }
         public AlertType Alert { get; set; }
     }
 }

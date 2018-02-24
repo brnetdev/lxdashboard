@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Domain
 {
-    public class Class1
+    public interface IDomainService
     {
     }
 }
