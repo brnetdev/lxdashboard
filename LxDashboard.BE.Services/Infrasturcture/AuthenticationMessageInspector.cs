@@ -20,6 +20,7 @@ namespace LxDashboard.BE.Services.Infrasturcture
             var messageBuff = request.CreateBufferedCopy(int.MaxValue);
             var message = messageBuff.CreateMessage();
             var authSessionIdHeader = nameof(LxDashboard.BE.Contracts.Message<object>.AuthSessionId);
+
             if (message.Headers.FindHeader(authSessionIdHeader, "") == -1)
             {
                 throw new FaultException("Invalid message format");
@@ -41,7 +42,7 @@ namespace LxDashboard.BE.Services.Infrasturcture
 
             var identity = new GenericIdentity(ident);            
 
-            var principal = new GenericPrincipal(identity, new string[1] { "User" });
+            var principal = new GenericPrincipal(identity, new string[1] { "Users" });
             Thread.CurrentPrincipal = principal;
 
             return null;
@@ -49,7 +50,7 @@ namespace LxDashboard.BE.Services.Infrasturcture
 
         public void BeforeSendReply(ref Message reply, object correlationState)
         {
-            throw new NotImplementedException();
+            ;
         }
     }
 }
