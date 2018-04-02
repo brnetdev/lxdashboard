@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +79,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LxDashboard.BE.Contracts\LxDashboard.BE.Contracts.csproj">
+      <Project>{152d3d0d-e98c-473f-b92d-0f5a14b02ff7}</Project>
+      <Name>LxDashboard.BE.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LxDashboard.FE.Common\LxDashboard.FE.Common.csproj">
+      <Project>{8915175c-a702-41dc-a304-ab42984d0931}</Project>
+      <Name>LxDashboard.FE.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

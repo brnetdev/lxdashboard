@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LxDashboard.BE.Contracts.Services
 {
-    [ServiceContract]
+    [ServiceContract(Name="AuthService", ConfigurationName = "AuthService")]
     public interface IAuthService
     {
         [OperationContract]
@@ -16,7 +16,7 @@ namespace LxDashboard.BE.Contracts.Services
         string Authenticate(string login, string password);
 
         [OperationContract(IsOneWay = true)]
-        void Logout(string AuthSessionId);
+        void Logout(string authSessionId);
 
         [OperationContract]
         [FaultContract(typeof(UserNotUniqueFault))]
