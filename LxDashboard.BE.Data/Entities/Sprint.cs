@@ -12,7 +12,7 @@ namespace LxDashboard.BE.Data.Entities
 
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
-
+        
         public string Objectives { get; set; }
         public int Number { get; set; }
         public List<Branch> Branches { get; set; }

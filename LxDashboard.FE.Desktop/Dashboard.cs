@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LxDashboard.FE.Common.Proxies;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,10 @@ namespace LxDashboard.FE.Desktop
 
         private void label2_Click(object sender, EventArgs e)
         {
+            using (var proxy = new AuthServiceProxy())
+            {
+                proxy.AddUser("sdsds", "sdsdsd");
+            }
 
         }
 
